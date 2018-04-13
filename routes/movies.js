@@ -8,11 +8,12 @@ const Movie = require("../models/Movie")
   res.render("movies");
 }); */
 
-router.get("/movies", (req, res) => {
-  Movie.find().then( movies => {
+
+router.get("/", (req, res) => {
+   Movie.find().then( movies => {
     res.render("movies", {movies});
     //res.render("movie_list", {movies});
-  })
+   }) 
 });
 
 
